@@ -11,6 +11,7 @@ export default function Navbar({ toggleDarkMode }: IProps) {
   const [showNav, setShowNav] = useState(true);
 
   useEffect(() => {
+    setPrevScrollPos(window.scrollY);
     window.addEventListener("scroll", function () {
       // current scroll position
       const currentScrollPos = window.scrollY;
@@ -25,10 +26,9 @@ export default function Navbar({ toggleDarkMode }: IProps) {
 
       // update previous scroll position
       setPrevScrollPos(currentScrollPos);
+      return () => window.removeEventListener("scroll", () => {});
     });
-
-    return () => window.removeEventListener("scroll", () => {});
-  }, []);
+  }, [prevScrollPos]);
 
   return (
     <nav
