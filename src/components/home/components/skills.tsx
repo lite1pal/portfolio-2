@@ -2,7 +2,7 @@ import SkillCard from "@/components/base/skillCard";
 
 export default function Skills() {
   return (
-    <div className="mx-auto flex w-fit items-center justify-center gap-5">
+    <div className="mx-auto flex w-fit flex-col items-center justify-center gap-5 lg:flex-row">
       <SkillCard
         svgIcon={
           <svg

@@ -28,11 +28,12 @@ export default function Testimonials() {
       </svg>
       <Swiper
         modules={[Pagination, Navigation]}
+        className="w-full xl:w-3/4"
         style={
           {
-            width: "50%",
+            // width: "100%",
             paddingBottom: "3rem",
-            "--swiper-pagination-color": "white",
+            "--swiper-pagination-color": "rgb(52 211 153)",
             "--swiper-pagination-bullet-inactive-color": "gray",
             "--swiper-pagination-bullet-inactive-opacity": "1",
             "--swiper-pagination-bullet-size": "8px",

@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 export default function Hero() {
   return (
     <div className="mx-auto mt-20 flex w-fit flex-col items-center gap-10 text-center font-medium text-slate-900 dark:text-slate-50">
-      <div className="text-5xl leading-tight">
+      <div className="w-11/12 text-3xl leading-tight sm:text-5xl md:w-full">
         <div>
           Take your business to the{" "}
           <span className="hover:cursor-default hover:bg-gradient-to-r hover:from-emerald-700 hover:to-emerald-400 hover:bg-clip-text hover:text-transparent">

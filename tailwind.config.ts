@@ -13,10 +13,10 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      // cursor: {
-      //   fancy:
-      //     "url(https://play.tailwindcss.com/favicons/favicon-32x32.png?v=3), pointer",
-      // },
+      cursor: {
+        default:
+          "url(http://www.rw-designer.com/cursor-extern.php?id=154891), default",
+      },
     },
   },
   darkMode: "class",

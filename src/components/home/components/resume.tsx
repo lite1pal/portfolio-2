@@ -9,9 +9,9 @@ export default function Resume() {
         <SectionTitle>Resume</SectionTitle>
         <SectionHeader>I Worked For Some Big Companies</SectionHeader>
       </div>
-      <div className="grid w-fit grid-cols-2 space-x-3">
+      <div className="grid w-full grid-rows-2 space-x-3 px-4 sm:w-fit md:p-0 lg:grid-cols-2 lg:grid-rows-1">
         <div className="flex flex-col gap-7">
-          <div className="text-2xl font-medium text-slate-900 dark:text-slate-50">
+          <div className="text-xl font-medium text-slate-900 lg:text-2xl dark:text-slate-50">
             Experience
           </div>
           <div className="group/list flex flex-col gap-4">
@@ -36,7 +36,7 @@ export default function Resume() {
           </div>
         </div>
         <div className="flex flex-col gap-7">
-          <div className="text-2xl font-medium text-slate-900 dark:text-slate-50">
+          <div className="text-xl font-medium text-slate-900 lg:text-2xl dark:text-slate-50">
             Education
           </div>
           <div className="group/list flex flex-col gap-4">

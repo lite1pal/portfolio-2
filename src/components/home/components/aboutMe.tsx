@@ -11,11 +11,11 @@ export default function AboutMe() {
           A Passionate Web Developer Who Loves to Code
         </SectionHeader>
       </div>
-      <div className="flex gap-36">
-        <div className="flex flex-col gap-10">
-          <div className="h-72 overflow-y-hidden rounded-lg border-slate-800">
+      <div className="flex flex-col gap-16 md:flex-row lg:gap-36">
+        <div className="flex flex-col items-center gap-10">
+          <div className="h-56 w-56 overflow-y-hidden rounded-lg border-slate-800 md:w-fit">
             <img
-              className="h-full w-full transition duration-700 hover:bg-emerald-400"
+              className="h-full w-full object-cover transition duration-700 hover:bg-emerald-400"
               src="/my-photo.png"
             />
           </div>
@@ -71,8 +71,8 @@ export default function AboutMe() {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col gap-7">
-          <div className="w-96 text-slate-400">
+        <div className="flex flex-col items-center gap-7 md:items-start">
+          <div className="px-4 text-slate-400 lg:w-96 lg:p-0">
             Back in 2012, I decided to try my hand at creating custom Tumblr
             themes and tumbled head first into the rabbit hole of coding and web
             development. Fast-forward to today, and I’ve had the privilege of

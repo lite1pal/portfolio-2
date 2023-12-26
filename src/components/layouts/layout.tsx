@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <body
       className={`${inter.className} ${
         isDark && "dark"
-      } max-w-screen min-h-screen overflow-x-hidden bg-slate-50 bg-gradient-to-r text-emerald-500 dark:bg-slate-900 dark:from-slate-950 dark:to-slate-900 dark:text-emerald-400`}
+      } max-w-screen min-h-screen cursor-default overflow-x-hidden bg-slate-50 bg-gradient-to-r text-emerald-500 transition duration-300 dark:bg-slate-900 dark:from-slate-950 dark:to-slate-900 dark:text-emerald-400`}
     >
       <main className={`mx-auto md:container`}>
         <div

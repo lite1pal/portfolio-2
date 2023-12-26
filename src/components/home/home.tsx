@@ -15,12 +15,29 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Testimonials from "./components/testimonials";
 import Resume from "./components/resume";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-24">
-      <Hero />
-      <Skills />
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Hero />
+        </motion.div>
+      </AnimatePresence>
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: "30%" }}
+          animate={{ opacity: 1, y: "0" }}
+          transition={{ duration: 0.5 }}
+        >
+          <Skills />
+        </motion.div>
+      </AnimatePresence>
       <AboutMe />
       <Resume />
       <Testimonials />
