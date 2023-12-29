@@ -11,7 +11,7 @@ export function ResumeItem({ position, timeline, place, description }: IProps) {
       <div className="h-5 min-h-5 w-5 min-w-5 rounded-full bg-emerald-400"></div>
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-3 md:gap-0.5">
-          <div className="flex flex-col md:flex-row md:gap-3">
+          <div className="flex flex-col items-center md:flex-row md:gap-3">
             <div className="text-lg font-medium text-slate-900 transition group-hover:text-emerald-400 dark:text-slate-50">
               {position}
             </div>
