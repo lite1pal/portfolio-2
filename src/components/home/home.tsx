@@ -16,6 +16,7 @@ import { Pagination } from "swiper/modules";
 import Testimonials from "./components/testimonials";
 import Resume from "./components/resume";
 import { AnimatePresence, motion } from "framer-motion";
+import Services from "./components/services";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
       </AnimatePresence>
       <AboutMe />
       <Resume />
+      <Services />
       <Testimonials />
     </div>
   );
