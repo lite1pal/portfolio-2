@@ -18,12 +18,12 @@ export default function Testimonial({ testimonial, company }: IProps) {
       </a>
       <div className="flex items-center gap-3.5">
         {/* <Avatar sx={{ bgcolor: "rgb(52 211 153)" }} /> */}
-        <div className="h-12 w-12 rounded-full">
+        {/* <div className="h-12 w-12 rounded-full">
           <img
             className="rounded-full"
             src="https://iamjamessmith.xyz/assets/img/testimonials/Guy06.jpg"
           />
-        </div>
+        </div> */}
         <div className="space-y-1 font-medium text-slate-900 dark:text-slate-50">
           <div>{company}</div>
           {/* <div className="text-sm text-gray-500 dark:text-gray-400">

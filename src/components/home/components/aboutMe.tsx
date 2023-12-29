@@ -1,6 +1,7 @@
 import Button from "@/components/base/button";
 import SectionHeader from "@/components/base/sectionHeader";
 import SectionTitle from "@/components/base/sectionTitle";
+import Image from "next/image";
 
 export default function AboutMe() {
   return (
@@ -14,9 +15,12 @@ export default function AboutMe() {
       <div className="flex flex-col gap-16 md:flex-row lg:gap-36">
         <div className="flex flex-col items-center gap-10">
           <div className="h-56 w-56 overflow-y-hidden rounded-lg border-slate-800 md:w-fit">
-            <img
+            <Image
               className="h-full w-full object-cover transition duration-700 hover:bg-emerald-400"
               src="/my-photo.png"
+              alt="my-image"
+              width={1920}
+              height={1080}
             />
           </div>
           <div className="mx-auto flex gap-6">
