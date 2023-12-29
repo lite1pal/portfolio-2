@@ -24,7 +24,7 @@ export default function Testimonial({ testimonial, company }: IProps) {
             src="https://iamjamessmith.xyz/assets/img/testimonials/Guy06.jpg"
           />
         </div> */}
-        <div className="space-y-1 font-medium text-slate-900 dark:text-slate-50">
+        <div className="space-y-1 font-light text-slate-900 dark:text-slate-100">
           <div>{company}</div>
           {/* <div className="text-sm text-gray-500 dark:text-gray-400">
             25.10.2023
