@@ -7,7 +7,7 @@ export default function Resume() {
     <div className="flex flex-col items-center gap-10">
       <div className="flex flex-col items-center gap-2 text-center">
         <SectionTitle>Resume</SectionTitle>
-        <SectionHeader>I Worked For Some Big Companies</SectionHeader>
+        <SectionHeader>I Worked For Some Awesome Companies</SectionHeader>
       </div>
       <div className="grid w-full grid-rows-2 space-x-3 px-4 sm:w-fit md:p-0 lg:grid-cols-2 lg:grid-rows-1">
         <div className="flex flex-col gap-7">
