@@ -78,13 +78,12 @@ export default function AboutMe() {
         </div>
         <div className="flex flex-col items-center gap-7 md:items-start">
           <div className="px-4 text-slate-400 lg:w-96 lg:p-0">
-            Back in 2012, I decided to try my hand at creating custom Tumblr
-            themes and tumbled head first into the rabbit hole of coding and web
-            development. Fast-forward to today, and I’ve had the privilege of
-            building software for an advertising agency, a start-up, a
-            student-led design studio, and a huge corporation. My main focus
-            these days is building products and leading projects for our clients
-            at Upstatement.
+            Building web applications and making my clients happy has become my
+            drug. Maybe the most important thing for me while working with
+            clients is clear and engaging communication, I believe that's the
+            key to any problem. So, I guess you came to take you business to the
+            next level, feel free to scroll a bit lower, and check out the
+            services I offer, hope you'll find what you're looking for!
           </div>
           <Button>Download CV</Button>
         </div>
