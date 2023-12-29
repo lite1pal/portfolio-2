@@ -9,13 +9,21 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import SectionParagraph from "@/components/base/sectionParagraph";
 
 export default function Testimonials() {
   return (
     <div className="flex flex-col items-center gap-9">
       <div className="flex flex-col items-center gap-2 text-center">
         <SectionTitle>Testimonials</SectionTitle>
-        <SectionHeader>What Clients Say About Me</SectionHeader>
+        <SectionHeader>Trusted By The Best Clients</SectionHeader>
+        <SectionParagraph>
+          Delivering the highest-quality work for my clients is what makes me
+          learn everyday.{" "}
+          <span className="text-slate-100">
+            Their trust keeps me moving forward
+          </span>
+        </SectionParagraph>
       </div>
       <svg
         className="dark:text-emeralf-400 mx-auto h-16 w-16 text-emerald-400"
