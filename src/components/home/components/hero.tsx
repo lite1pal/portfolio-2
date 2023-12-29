@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
         {/* <div>Put your money to work</div> */}
       </div>
-      <Button>Explore more</Button>
+      <Button>Explore services</Button>
     </div>
   );
 }
