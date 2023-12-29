@@ -13,7 +13,7 @@ export default function Services() {
           I know you have many great ideas lying dusting on the shelf in the
           backyard shed.{" "}
           <span className="text-slate-100">
-            Bring them to me, and let's discuss how to make them shine
+            Bring them to me, and let{"'"}s discuss how to make them shine
           </span>
         </SectionParagraph>
         <div className="group/list mt-3 flex w-full flex-col flex-wrap gap-0 lg:flex-row">
