@@ -13,9 +13,11 @@ export default function Layout({ children }: { children: ReactNode }) {
   // toggles global theme
   const toggleDarkMode = () => {
     if (isDark) {
+      document.documentElement.classList.remove("dark");
       localStorage.theme = "light";
       setIsDark(false);
     } else {
+      document.documentElement.classList.add("dark");
       localStorage.theme = "dark";
       setIsDark(true);
     }
@@ -36,18 +38,14 @@ export default function Layout({ children }: { children: ReactNode }) {
 
   // handles global theme
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-      setIsDark(true);
-    } else {
-      document.documentElement.classList.remove("dark");
-      setIsDark(false);
-    }
-  }, [isDark]);
+    document.documentElement.classList.add("dark");
+    setIsDark(true);
+    // if (localStorage.theme === "dark") {
+    // } else {
+    //   document.documentElement.classList.remove("dark");
+    //   setIsDark(false);
+    // }
+  }, []);
 
   return (
     <body
