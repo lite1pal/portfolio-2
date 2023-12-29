@@ -9,9 +9,10 @@ export default function AboutMe() {
       <div className="flex flex-col items-center gap-2 text-center">
         <SectionTitle>About me</SectionTitle>
         <SectionHeader>
-          A Passionate Web Developer Who Loves to Code
+          Creative Web Developer Who Will Solve Your Problem
         </SectionHeader>
       </div>
+
       <div className="flex flex-col gap-16 md:flex-row lg:gap-36">
         <div className="flex flex-col items-center gap-10">
           <div className="h-56 w-56 overflow-y-hidden rounded-lg border-slate-800 md:w-fit">
