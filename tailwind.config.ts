@@ -15,7 +15,8 @@ const config: Config = {
       },
       cursor: {
         default:
-          "url(http://www.rw-designer.com/cursor-extern.php?id=154891), default",
+          // "url(http://www.rw-designer.com/cursor-extern.php?id=154891), default",
+          "url(/green_cursor.cur), default",
       },
     },
   },
