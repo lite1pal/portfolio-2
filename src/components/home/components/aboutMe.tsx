@@ -80,10 +80,11 @@ export default function AboutMe() {
           <div className="px-4 text-slate-400 lg:w-96 lg:p-0">
             Building web applications and making my clients happy has become my
             drug. Maybe the most important thing for me while working with
-            clients is clear and engaging communication, I believe that's the
-            key to any problem. So, I guess you came to take you business to the
-            next level, feel free to scroll a bit lower, and check out the
-            services I offer, hope you'll find what you're looking for!
+            clients is clear and engaging communication, I believe that{"'"}s
+            the key to any problem. So, I guess you came to take your business
+            to the next level, feel free to scroll a bit lower, and check out
+            the services I offer, sure you{"'"}ll find what you{"'"}re looking
+            for!
           </div>
           <Button>Download CV</Button>
         </div>
