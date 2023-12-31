@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import SectionParagraph from "@/components/base/sectionParagraph";
+import Span from "@/components/base/span";
 
 export default function Testimonials() {
   return (
@@ -19,14 +20,11 @@ export default function Testimonials() {
         <SectionHeader>Trusted By The Best Clients</SectionHeader>
         <SectionParagraph>
           Delivering the highest-quality work for my clients is what makes me
-          learn everyday.{" "}
-          <span className="text-slate-100">
-            Their trust keeps me moving forward
-          </span>
+          learn everyday. <Span>Their trust keeps me moving forward</Span>
         </SectionParagraph>
       </div>
       <svg
-        className="dark:text-emeralf-400 mx-auto h-16 w-16 text-emerald-400"
+        className="dark:text-primary-dark text-primary mx-auto h-16 w-16"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
@@ -44,15 +42,15 @@ export default function Testimonials() {
             "--swiper-pagination-color": "rgb(52 211 153)",
             "--swiper-pagination-bullet-inactive-color": "gray",
             "--swiper-pagination-bullet-inactive-opacity": "1",
-            "--swiper-pagination-bullet-size": "8px",
-            "--swiper-pagination-bullet-horizontal-gap": "8px",
+            "--swiper-pagination-bullet-size": "9px",
+            "--swiper-pagination-bullet-horizontal-gap": "9px",
             "--swiper-navigation-color": "rgb(52 211 153)",
           } as any
         }
         spaceBetween={0}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        navigation
+        // navigation
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
