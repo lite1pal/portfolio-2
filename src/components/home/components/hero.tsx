@@ -12,7 +12,7 @@ export default function Hero() {
           </span>
           .
         </div>
-        <div className="text-slate-400">
+        <div className="text-slate-500 dark:text-slate-400">
           <Typewriter
             cursor
             cursorBlinking
@@ -29,7 +29,15 @@ export default function Hero() {
         </div>
         {/* <div>Put your money to work</div> */}
       </div>
-      <Button>Explore services</Button>
+      <Button
+        onClick={() =>
+          document
+            .getElementById("services")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
+      >
+        Explore services
+      </Button>
     </div>
   );
 }
