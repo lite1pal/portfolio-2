@@ -75,7 +75,9 @@ export default function ContactForm() {
         <SectionHeader>Let me know</SectionHeader>
         <SectionParagraph>
           Waiting for your letter so we can start making your business better.{" "}
-          <Span>I'm sure we'll find a way around</Span>
+          <Span>
+            I{"'"}m sure we{"'"}ll find a way around
+          </Span>
         </SectionParagraph>
       </div>
       <form
