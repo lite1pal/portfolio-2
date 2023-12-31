@@ -5,5 +5,9 @@ export default function SectionParagraph({
 }: {
   children: ReactNode;
 }) {
-  return <div className="mt-3 w-full text-slate-400 lg:w-2/3">{children}</div>;
+  return (
+    <div className="mt-3 w-full px-3 text-sm text-slate-500 sm:px-0 md:w-2/3 lg:text-base dark:text-slate-400">
+      {children}
+    </div>
+  );
 }
