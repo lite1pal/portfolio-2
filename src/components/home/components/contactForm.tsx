@@ -33,7 +33,7 @@ export default function ContactForm() {
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     try {
       axios
-        .post(`${TELEGRAM_API_URL}${TELEGRAM_API_KEY}`, {
+        .post(`${TELEGRAM_API_URL}${TELEGRAM_API_KEY}/sendMessage`, {
           chat_id: TELEGRAM_CHAT_ID,
           parse_mode: "html",
           text: `Name: ${data.name}\n\nEmail: ${data.email}\n\nMessage: ${data.message}`,
