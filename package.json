@@ -19,6 +19,8 @@
     "react": "^18",
     "react-awesome-slider": "^4.1.0",
     "react-dom": "^18",
+    "react-hook-form": "^7.49.2",
+    "react-hot-toast": "^2.4.1",
     "react-responsive-carousel": "^3.2.23",
     "react-simple-typewriter": "^5.0.1",
     "swiper": "^11.0.5"
