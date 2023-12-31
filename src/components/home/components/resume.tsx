@@ -9,8 +9,8 @@ export default function Resume() {
         <SectionTitle>Resume</SectionTitle>
         <SectionHeader>I Worked For Some Awesome Companies</SectionHeader>
       </div>
-      <div className="grid w-full grid-rows-2 space-x-3 px-4 sm:w-fit md:p-0 lg:grid-cols-2 lg:grid-rows-1">
-        <div className="flex flex-col gap-7">
+      <div className="flex w-full flex-col gap-10 px-4 sm:w-fit md:p-0 lg:flex-row lg:gap-5">
+        <div className="flex h-fit flex-col gap-7">
           <div className="text-xl font-medium text-slate-900 lg:text-2xl dark:text-slate-50">
             Experience
           </div>
@@ -41,18 +41,21 @@ export default function Resume() {
           </div>
           <div className="group/list flex flex-col gap-4">
             <ResumeItem
+              type="education"
               position="Bachelor of Computer Engineering"
               timeline="( Sep 2020 - Present )"
               place="Navional Aviation University in Ukraine"
               description="Pursuing my computer engineering studies and at the same time getting my hands dirty in the web development world."
             />
             <ResumeItem
+              type="education"
               position="Back-end Engineering Certification"
               timeline="( Dec 2022 - May 2023 )"
               place="Codecademy"
               description="Learned almost everything I know about web dev there, starting from pure Javascript, ending by creating APIs from scratch, designing databases and connecting all of them to a single web app."
             />
             <ResumeItem
+              type="education"
               position="Python Beginners Course"
               timeline="(Jul 2022 - Aug 2022)"
               place="Stepik"
