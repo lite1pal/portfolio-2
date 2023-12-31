@@ -15,16 +15,16 @@ export default function AboutMe() {
 
       <div className="flex flex-col gap-16 md:flex-row lg:gap-36">
         <div className="flex flex-col items-center gap-10">
-          <div className="h-56 w-56 overflow-y-hidden rounded-lg border-slate-800 md:w-fit">
+          <div className="h-56 w-56 overflow-y-hidden rounded-full border border-slate-800 border-opacity-50 md:w-fit">
             <Image
-              className="h-full w-full object-cover transition duration-700 hover:bg-emerald-400"
+              className="h-full w-full object-cover"
               src="/my-photo.png"
               alt="my-image"
               width={1920}
               height={1080}
             />
           </div>
-          <div className="mx-auto flex gap-6">
+          <div className="text-primary dark:text-primary-dark mx-auto flex gap-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -77,14 +77,16 @@ export default function AboutMe() {
           </div>
         </div>
         <div className="flex flex-col items-center gap-7 md:items-start">
-          <div className="px-4 text-slate-400 lg:w-96 lg:p-0">
-            Building web applications and making my clients happy has become my
-            drug. Maybe the most important thing for me while working with
-            clients is clear and engaging communication, I believe that{"'"}s
-            the key to any problem. So, I guess you came to take your business
-            to the next level, feel free to scroll a bit lower, and check out
-            the services I offer, sure you{"'"}ll find what you{"'"}re looking
-            for!
+          <div className="px-4 leading-relaxed text-slate-500 lg:w-96 lg:p-0 dark:text-slate-400">
+            Hey, I{"'"}m Denis. Building web applications and making my clients
+            happy has become my drug. Maybe the most important thing for me
+            while working with clients is clear and engaging communication, I
+            believe that{"'"}s the key to any problem. So, I guess you came to
+            take your business to the next level, feel free to scroll a bit
+            lower, and check out the services I offer,{" "}
+            <span className="dark:text-slate-100">
+              sure you{"'"}ll find what you{"'"}re looking for!
+            </span>
           </div>
           <Button>Download CV</Button>
         </div>
