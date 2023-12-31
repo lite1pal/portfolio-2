@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface IProps {
@@ -42,9 +43,9 @@ export default function Navbar({ toggleDarkMode }: IProps) {
         <nav
           className={`${
             showNav && "pointer-events-auto opacity-100"
-          } cursor-fancy pointer-events-none bg-slate-50 bg-gradient-to-r p-5 opacity-0 transition duration-300 dark:bg-slate-900 dark:from-slate-950 dark:to-slate-900 `}
+          } cursor-fancy pointer-events-none border-b border-slate-900 border-opacity-5 bg-slate-50 bg-gradient-to-r p-5 opacity-0 transition duration-300 dark:border-opacity-0 dark:bg-slate-900 dark:from-slate-950 dark:to-slate-900`}
         >
-          <ul className="flex flex-wrap justify-center gap-6 text-lg font-medium sm:gap-10 md:gap-16">
+          <ul className="text-primary dark:text-primary-dark flex flex-wrap justify-center gap-6 text-lg font-medium sm:gap-10 md:gap-16">
             <li
               onClick={() =>
                 document
@@ -55,7 +56,14 @@ export default function Navbar({ toggleDarkMode }: IProps) {
             >
               About
             </li>
-            <li className="cursor-pointer hover:text-black dark:hover:text-slate-50">
+            <li
+              onClick={() =>
+                document
+                  .getElementById("services")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="cursor-pointer hover:text-black dark:hover:text-slate-50"
+            >
               Services
             </li>
             <li className="cursor-pointer hover:text-black dark:hover:text-slate-50">
@@ -67,7 +75,7 @@ export default function Navbar({ toggleDarkMode }: IProps) {
             <li className="cursor-pointer hover:text-black dark:hover:text-slate-50">
               Collaboration
             </li>
-            <li className="hidden border-r border-emerald-400 opacity-50 lg:flex"></li>
+            <li className="border-primary dark:border-primary-dark hidden border-r opacity-50 lg:flex"></li>
             <li className="hidden lg:flex" onClick={toggleDarkMode}>
               <svg
                 viewBox="0 0 24 24"
