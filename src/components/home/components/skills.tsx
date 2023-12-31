@@ -6,7 +6,7 @@ export default function Skills() {
       <SkillCard
         svgIcon={
           <svg
-            className="h-12 w-12 text-emerald-400 dark:text-emerald-400"
+            className="text-primary dark:text-primary-dark h-12 w-12"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -23,7 +23,7 @@ export default function Skills() {
       <SkillCard
         svgIcon={
           <svg
-            className="h-12 w-12 text-emerald-400 dark:text-emerald-400"
+            className="text-primary dark:text-primary-dark h-12 w-12"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -45,7 +45,7 @@ export default function Skills() {
       <SkillCard
         svgIcon={
           <svg
-            className="h-12 w-12 text-emerald-400 dark:text-emerald-400"
+            className="text-primary dark:text-primary-dark h-12 w-12"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
