@@ -33,14 +33,11 @@ export default function ContactForm() {
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     try {
       axios
-        .post(
-          "https://api.telegram.org/bot6626207734:AAFPi6KXasDdC93TnRPELSQV5eG47JSpyQk/sendMessage",
-          {
-            chat_id: TELEGRAM_CHAT_ID,
-            parse_mode: "html",
-            text: `Name: ${data.name}\n\nEmail: ${data.email}\n\nMessage: ${data.message}`,
-          },
-        )
+        .post(`${TELEGRAM_API_URL}${TELEGRAM_API_KEY}`, {
+          chat_id: TELEGRAM_CHAT_ID,
+          parse_mode: "html",
+          text: `Name: ${data.name}\n\nEmail: ${data.email}\n\nMessage: ${data.message}`,
+        })
         .then((response) => {
           toast.custom(
             (t) => (
