@@ -17,6 +17,7 @@ import Testimonials from "./components/testimonials";
 import Resume from "./components/resume";
 import { AnimatePresence, motion } from "framer-motion";
 import Services from "./components/services";
+import ContactForm from "./components/contactForm";
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
       <Resume />
       <Services />
       <Testimonials />
+      <ContactForm />
     </div>
   );
 }
