@@ -22,6 +22,7 @@ export default function AboutMe() {
               alt="my-image"
               width={1920}
               height={1080}
+              sizes="(max-width: 768px) 70vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div className="text-primary dark:text-primary-dark mx-auto flex gap-6">
