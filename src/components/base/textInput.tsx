@@ -14,7 +14,7 @@ export default function TextInput({
   return (
     <input
       {...register}
-      className={`${className} text-primary dark:text-primary-dark w-full border-b bg-transparent p-3 outline-none sm:w-96`}
+      className={`${className} w-full border-b bg-transparent p-3 text-primary outline-none sm:w-96 dark:text-primary-dark`}
       type={type}
       placeholder={placeholder}
     />

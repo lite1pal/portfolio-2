@@ -13,7 +13,7 @@ export default function Testimonial({ testimonial, company }: IProps) {
       <a
         target="_blank"
         href="https://www.linkedin.com/posts/denis-tarasenko-39bb44256_see-how-i-can-get-your-project-done-on-upwork-activity-7128743786175676417-RTZj?utm_source=share&utm_medium=member_desktop"
-        className="mx-auto w-96 text-center text-lg italic text-slate-500 dark:text-slate-50"
+        className="mx-auto w-2/3 text-center text-lg italic text-slate-500 dark:text-slate-50"
       >
         {testimonial}
       </a>
