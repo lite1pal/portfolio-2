@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <body
       className={`${inter.className} ${
         isDark && "dark"
-      } max-w-screen dark:text-primary-dark text-primary min-h-screen cursor-default overflow-x-hidden bg-slate-50 bg-gradient-to-r transition duration-300 dark:bg-slate-900 dark:from-slate-950 dark:to-slate-900`}
+      } max-w-screen min-h-screen cursor-default overflow-x-hidden bg-slate-50 bg-gradient-to-r text-primary transition duration-300 dark:bg-slate-900 dark:from-slate-950 dark:to-slate-900 dark:text-primary-dark`}
     >
       <main className={`mx-auto md:container`}>
         <div
@@ -60,12 +60,12 @@ export default function Layout({ children }: { children: ReactNode }) {
             left: mousePos.x - 430,
             background: `radial-gradient(2000px, rgba(16, 185, 129, 0.15),  transparent 20%)`,
           }}
-          className={`pointer-events-none fixed inset-0 top-0 z-20 h-[50rem] w-[50rem] rounded-full opacity-0 lg:opacity-75`}
+          className={`pointer-events-none fixed inset-0 top-0 z-20 h-[50rem] w-[50rem] rounded-full opacity-0 lg:dark:opacity-75`}
         ></div>
         <Navbar {...{ toggleDarkMode }} />
 
         {children}
-        <div className="dark:text-primary-dark text-primary mx-auto mb-7 mt-36 w-fit dark:font-extralight">
+        <div className="mx-auto mb-7 mt-36 w-fit text-primary dark:font-extralight dark:text-primary-dark">
           Designed & Built by Denis Tarasenko
         </div>
       </main>
