@@ -55,24 +55,25 @@ export default function Navbar({ toggleDarkMode }: IProps) {
           } cursor-fancy pointer-events-none border-b border-slate-900 border-opacity-5 bg-slate-50 bg-gradient-to-r p-5 opacity-0 transition duration-300 dark:border-opacity-0 dark:bg-slate-900 dark:from-slate-950 dark:to-slate-900`}
         >
           <ul className="flex flex-wrap items-center justify-center gap-6 text-lg font-medium text-primary sm:gap-10 md:gap-16 dark:text-primary-dark">
-            <Link href="/">
-              <li className="flex h-10 w-10 items-center justify-center">
+            <li className="flex h-10 w-10 items-center justify-center">
+              <Link href="/">
                 <Image
                   width={1920}
                   height={1080}
                   src="/DenisPenisSmallTowers.svg"
                   alt="logo"
                 />
-              </li>
-            </Link>
+              </Link>
+            </li>
             <li className="hidden h-8 border-r-2 border-primary opacity-50 lg:flex dark:border-primary-dark"></li>
             {Object.entries(navItems).map(([path, { name }]) => {
               return (
-                <Link key={path} href={path}>
-                  <li className="cursor-pointer hover:text-black dark:hover:text-slate-50">
-                    {name}
-                  </li>
-                </Link>
+                <li
+                  key={path}
+                  className="cursor-pointer hover:text-black dark:hover:text-slate-50"
+                >
+                  <Link href={path}>{name}</Link>
+                </li>
               );
             })}
 
