@@ -18,10 +18,14 @@ export async function GET(req: NextRequest) {
           height: "100%",
           width: "100%",
           display: "flex",
+          gap: "2rem",
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          backgroundImage: "url(https://denistarasenko.com/og-bg.png)",
+          backgroundColor: "#0f172a",
+          //   backgroundImage: "url(https://denistarasenko.com/og-bg.png)",
+          //   backgroundSize: "auto",
+          //   backgroundRepeat: "no-repeat",
         }}
       >
         <div
@@ -39,6 +43,22 @@ export async function GET(req: NextRequest) {
           }}
         >
           {postTitle}
+        </div>
+        <div
+          style={{
+            marginLeft: 190,
+            marginRight: 190,
+            display: "flex",
+            fontSize: 80,
+            fontFamily: "Inter",
+            letterSpacing: "-0.05em",
+            fontStyle: "normal",
+            color: "#94a3b8",
+            lineHeight: "120px",
+            whiteSpace: "pre-wrap",
+          }}
+        >
+          Denis Tarasenko
         </div>
       </div>
     ),
