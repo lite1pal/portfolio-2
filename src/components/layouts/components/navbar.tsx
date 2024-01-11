@@ -57,12 +57,7 @@ export default function Navbar({ toggleDarkMode }: IProps) {
           <ul className="flex flex-wrap items-center justify-center gap-6 text-lg font-medium text-primary sm:gap-10 md:gap-16 dark:text-primary-dark">
             <li className="flex h-10 w-10 items-center justify-center">
               <Link href="/">
-                <Image
-                  width={1920}
-                  height={1080}
-                  src="/DenisPenisSmallTowers.svg"
-                  alt="logo"
-                />
+                <Image width={1920} height={1080} src="/logo.svg" alt="logo" />
               </Link>
             </li>
             <li className="hidden h-8 border-r-2 border-primary opacity-50 lg:flex dark:border-primary-dark"></li>
