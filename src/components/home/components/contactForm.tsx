@@ -66,7 +66,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div id="contactme" className="flex flex-col items-center gap-10">
+    <div id="collaboration" className="flex flex-col items-center gap-10">
       <div className="flex flex-col items-center gap-2 text-center">
         <SectionTitle>Contact me</SectionTitle>
         <SectionHeader>Let me know</SectionHeader>

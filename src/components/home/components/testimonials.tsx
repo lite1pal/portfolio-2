@@ -14,7 +14,7 @@ import Span from "@/components/base/span";
 
 export default function Testimonials() {
   return (
-    <div className="flex flex-col items-center gap-9">
+    <div className="flex flex-col items-center gap-10">
       <div className="flex flex-col items-center gap-2 text-center">
         <SectionTitle>Testimonials</SectionTitle>
         <SectionHeader>Trusted By The Best Clients</SectionHeader>
@@ -24,7 +24,7 @@ export default function Testimonials() {
         </SectionParagraph>
       </div>
       <svg
-        className="dark:text-primary-dark text-primary mx-auto h-16 w-16"
+        className="mx-auto h-16 w-16 text-primary dark:text-primary-dark"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"

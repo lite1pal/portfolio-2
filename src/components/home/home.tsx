@@ -1,25 +1,21 @@
 "use client";
 
-import Button from "@/components/base/button";
-import Navbar from "@/components/layouts/components/navbar";
 import Hero from "./components/hero";
 import AboutMe from "./components/aboutMe";
 import Skills from "./components/skills";
-import Testimonial from "../base/testimonial";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
 import Testimonials from "./components/testimonials";
 import Resume from "./components/resume";
 import { AnimatePresence, motion } from "framer-motion";
 import Services from "./components/services";
 import ContactForm from "./components/contactForm";
+import Portfolio from "./components/portfolio";
+import SocialMediaIcons from "../base/socialMediaIcons";
+import { usePDF } from "react-to-pdf";
 
 export default function Home() {
+  const { toPDF, targetRef } = usePDF({ filename: "cv.pdf" });
   return (
     <div className="flex flex-col gap-24">
       <AnimatePresence>
@@ -40,11 +36,15 @@ export default function Home() {
           <Skills />
         </motion.div>
       </AnimatePresence>
-      <AboutMe />
-      <Resume />
+      <div ref={targetRef} className="flex flex-col gap-24">
+        <AboutMe {...{ toPDF }} />
+        <Resume />
+        <Portfolio />
+      </div>
       <Services />
       <Testimonials />
       <ContactForm />
+      <SocialMediaIcons />
     </div>
   );
 }
