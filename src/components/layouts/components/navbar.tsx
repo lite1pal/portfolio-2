@@ -1,12 +1,21 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface IProps {
   toggleDarkMode: () => void;
 }
+
+const navItems = {
+  "/#aboutme": { name: "About" },
+  "/#services": { name: "Services" },
+  "/#portfolio": { name: "Portfolio" },
+  "/blog": { name: "Blog" },
+  "/#collaboration": { name: "Collaboration" },
+};
 
 export default function Navbar({ toggleDarkMode }: IProps) {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -45,46 +54,37 @@ export default function Navbar({ toggleDarkMode }: IProps) {
             showNav && "pointer-events-auto opacity-100"
           } cursor-fancy pointer-events-none border-b border-slate-900 border-opacity-5 bg-slate-50 bg-gradient-to-r p-5 opacity-0 transition duration-300 dark:border-opacity-0 dark:bg-slate-900 dark:from-slate-950 dark:to-slate-900`}
         >
-          <ul className="text-primary dark:text-primary-dark flex flex-wrap justify-center gap-6 text-lg font-medium sm:gap-10 md:gap-16">
-            <li
-              onClick={() =>
-                document
-                  .getElementById("aboutme")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="cursor-pointer hover:text-black dark:hover:text-slate-50"
-            >
-              About
-            </li>
-            <li
-              onClick={() =>
-                document
-                  .getElementById("services")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="cursor-pointer hover:text-black dark:hover:text-slate-50"
-            >
-              Services
-            </li>
-            <li className="cursor-pointer hover:text-black dark:hover:text-slate-50">
-              Portfolio
-            </li>
-            <li className="cursor-pointer hover:text-black dark:hover:text-slate-50">
-              Blog
-            </li>
-            <li className="cursor-pointer hover:text-black dark:hover:text-slate-50">
-              Collaboration
-            </li>
-            <li className="border-primary dark:border-primary-dark hidden border-r opacity-50 lg:flex"></li>
-            <li className="hidden lg:flex" onClick={toggleDarkMode}>
+          <ul className="flex flex-wrap items-center justify-center gap-6 text-lg font-medium text-primary sm:gap-10 md:gap-16 dark:text-primary-dark">
+            <Link href="/">
+              <li className="flex h-10 w-10 items-center justify-center">
+                <Image
+                  width={1920}
+                  height={1080}
+                  src="/DenisPenisSmallTowers.svg"
+                  alt="logo"
+                />
+              </li>
+            </Link>
+            <li className="hidden h-8 border-r-2 border-primary opacity-50 lg:flex dark:border-primary-dark"></li>
+            {Object.entries(navItems).map(([path, { name }]) => {
+              return (
+                <Link key={path} href={path}>
+                  <li className="cursor-pointer hover:text-black dark:hover:text-slate-50">
+                    {name}
+                  </li>
+                </Link>
+              );
+            })}
+
+            {/* <li className="hidden lg:flex" onClick={toggleDarkMode}>
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 className="duration-50 group h-8 w-8 rounded-full p-1 transition"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z"
                   className="fill-sky-400/20"
                 ></path>
@@ -93,13 +93,13 @@ export default function Navbar({ toggleDarkMode }: IProps) {
                   className="fill-emerald-500 group-hover:fill-slate-900 dark:group-hover:fill-white"
                 ></path>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
                   className="fill-emerald-500 group-hover:fill-slate-900 dark:group-hover:fill-white"
                 ></path>
               </svg>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </motion.div>
