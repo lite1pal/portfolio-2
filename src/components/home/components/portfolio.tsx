@@ -40,6 +40,7 @@ export default function Portfolio() {
             },
             {
               label: "Telegram API",
+              link: "https://core.telegram.org/",
             },
           ]}
         />
