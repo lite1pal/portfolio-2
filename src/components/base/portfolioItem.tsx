@@ -42,6 +42,7 @@ export default function PortfolioItem({
           {tech?.map(({ label, link }) => {
             return (
               <a
+                key={label}
                 target="_blank"
                 href={link}
                 className="rounded-xl border border-primary border-opacity-50 px-3 py-1 font-medium text-primary dark:border-primary-dark dark:border-opacity-10 dark:font-extralight dark:text-primary-dark"
