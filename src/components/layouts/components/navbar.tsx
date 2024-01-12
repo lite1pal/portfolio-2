@@ -60,7 +60,7 @@ export default function Navbar({ toggleDarkMode }: IProps) {
                 <Image width={1920} height={1080} src="/logo.svg" alt="logo" />
               </Link>
             </li>
-            <li className="hidden h-8 border-r-2 border-primary opacity-50 lg:flex dark:border-primary-dark"></li>
+            <li className="hidden h-8 border-r-2 border-primary  lg:flex dark:border-primary-dark"></li>
             {Object.entries(navItems).map(([path, { name }]) => {
               return (
                 <li

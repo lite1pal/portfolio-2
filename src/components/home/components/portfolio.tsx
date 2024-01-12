@@ -21,7 +21,7 @@ export default function Portfolio() {
         <PortfolioItem
           count={1}
           title="Pet E-commerce website"
-          description="This project is the best I've built so far in terms of technologies used there. Apart from Next.js and TailwindCSS, I also used Prisma ORM, Auth.js, DaisyUI, Flowbite-react, MUI, Joy UI and many more other small packages that fulfill each other perfectly."
+          description="This project is the best I've built so far in terms of technologies used there. Apart from Next.js and TailwindCSS, I also used Prisma ORM, Auth.js, DaisyUI, Flowbite-react, MUI and Joy UI. SEO is optimized following the best practices possible."
           img="/leyven-image.png"
           link="https://www.leyven.com.ua"
           tech={[
@@ -49,7 +49,7 @@ export default function Portfolio() {
           count={2}
           reverse
           title="Auto-auction Catalog website"
-          description="This project is the best I've built so far in terms of technologies used there. Apart from Next.js and TailwindCSS, I also used Prisma ORM, Auth.js, DaisyUI, Flowbite-react, MUI, Joy UI and many more other small packages that fulfill each other perfectly."
+          description="I got this job on Upwork, and my task was to create an entire front-end for the website, and also connecting it to the existing back-end. Tight deadlines, but it was worth all the effort!"
           img="/carlink-image-en.png"
           link="https://car-link.tools"
           tech={[
@@ -63,7 +63,7 @@ export default function Portfolio() {
         <PortfolioItem
           count={3}
           title="Auto-auction Dashboard website"
-          description="This project is the best I've built so far in terms of technologies used there. Apart from Next.js and TailwindCSS, I also used Prisma ORM, Auth.js, DaisyUI, Flowbite-react, MUI, Joy UI and many more other small packages that fulfill each other perfectly."
+          description="It's our second collaboration with a client, and this time I had to optimize almost every dashboard page for mobile/tablet screens. Got hands-on experience with styled-components, solid UI library indeed."
           img="/covin-image.png"
           link="https://covin.io"
           tech={[
