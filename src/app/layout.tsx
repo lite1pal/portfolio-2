@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/layouts/layout";
+import Script from "next/script";
+import { GOOGLE_ANALYTICS_ID } from "@/config/env";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://denistarasenko.com"),
@@ -71,6 +73,25 @@ export default function RootLayout({
         />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <head>
+          <Script
+            id="google-analytics-script-1"
+            strategy="lazyOnload"
+            src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
+          ></Script>
+          <Script
+            id="google-analytics-script-2"
+            strategy="lazyOnload"
+            dangerouslySetInnerHTML={{
+              __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', '${GOOGLE_ANALYTICS_ID}');`,
+            }}
+          ></Script>
+        </head>
       </head>
       <Layout {...{ children }} />
     </html>
