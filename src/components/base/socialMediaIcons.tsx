@@ -1,6 +1,6 @@
 export default function SocialMediaIcons() {
   return (
-    <div className="pointer-events-none fixed left-5 top-1/2 mx-auto flex -translate-y-1/2 transform flex-col gap-6 text-primary opacity-0 lg:pointer-events-auto lg:opacity-100 dark:text-primary-dark">
+    <div className="pointer-events-none fixed left-5 top-1/2 mx-auto flex -translate-y-1/2 transform flex-col gap-6 text-primary opacity-0 xl:pointer-events-auto xl:opacity-100 dark:text-primary-dark">
       <a title="Github" target="_blank" href="https://github.com/lite1pal">
         <svg
           xmlns="http://www.w3.org/2000/svg"

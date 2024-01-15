@@ -19,9 +19,9 @@ export default function AboutMe({ toPDF }: Props) {
         </SectionHeader>
       </div>
 
-      <div className="flex flex-col gap-16 md:flex-row lg:gap-36">
+      <div className="flex flex-col gap-16 lg:flex-row lg:gap-36">
         <div className="flex flex-col items-center gap-10">
-          <div className="h-56 w-56 overflow-y-hidden rounded-full border border-slate-800 border-opacity-50 md:w-fit">
+          <div className="h-56 w-56 overflow-y-hidden rounded-full border border-slate-800 border-opacity-50">
             <Image
               className="h-full w-full object-cover"
               src="/my-photo.png"
@@ -124,7 +124,7 @@ export default function AboutMe({ toPDF }: Props) {
               sure you{"'"}ll find what you{"'"}re looking for!
             </span>
           </div>
-          <Link href="#collaboration">
+          <Link className="mx-auto" href="#collaboration">
             <Button>Hit me up</Button>
           </Link>
         </div>

@@ -10,7 +10,7 @@ export default function Resume() {
         <SectionHeader>I Worked For Some Awesome Companies</SectionHeader>
       </div>
       <div className="flex w-full flex-col gap-10 px-4 sm:w-fit md:p-0 lg:flex-row lg:gap-5">
-        <div className="flex h-fit flex-col gap-7">
+        <div className="flex h-fit flex-col gap-7 px-5">
           <div className="text-xl font-medium text-slate-900 lg:text-2xl dark:text-slate-50">
             Experience
           </div>
