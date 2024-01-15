@@ -22,7 +22,7 @@ export default function Portfolio() {
           count={1}
           title="Pet E-commerce website"
           description="This project is the best I've built so far in terms of technologies used there. Apart from Next.js and TailwindCSS, I also used Prisma ORM, Auth.js, DaisyUI, Flowbite-react, MUI and Joy UI. SEO is optimized following the best practices possible."
-          img="/leyven-image.png"
+          img="/leyven-image-en.png"
           link="https://www.leyven.com.ua"
           tech={[
             { label: "Next.js", link: "https://nextjs.org/" },
