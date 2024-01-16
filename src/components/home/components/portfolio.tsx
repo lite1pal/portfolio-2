@@ -75,6 +75,21 @@ export default function Portfolio() {
             },
           ]}
         />
+        <XLine />
+        <PortfolioItem
+          count={4}
+          reverse
+          title="Landing Page of Real estate AI platform"
+          description="My first commercial job, never forget this one. I got it on Upwork and my task was to build a landing page following the Figma design. Used SCSS and MUI for the first time here."
+          img="/kurby-image.png"
+          link="https://kurby.ai"
+          tech={[
+            { label: "Next.js", link: "https://nextjs.org/" },
+            { label: "React.js", link: "https://react.dev/" },
+            { label: "SCSS", link: "https://tailwindcss.com/" },
+            { label: "MUI", link: "https://www.prisma.io/" },
+          ]}
+        />
       </div>
     </div>
   );

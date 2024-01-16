@@ -25,7 +25,9 @@ export default function PortfolioItem({
   return (
     <div className="relative flex w-full flex-col items-center justify-between gap-10 xl:flex-row xl:items-start xl:gap-10">
       <div
-        className={`${reverse && "order-2"} z-2 relative flex flex-col gap-8`}
+        className={`${
+          reverse && "lg:order-2"
+        } z-2 relative flex flex-col gap-8`}
       >
         <a
           target="_blank"
@@ -58,7 +60,7 @@ export default function PortfolioItem({
         href={link}
         target="_blank"
         className={`${
-          reverse && "order-1"
+          reverse && "lg:order-1"
         } group relative float-right max-w-xl opacity-70 transition duration-300 hover:skew-x-0 hover:opacity-100`}
       >
         <div className="absolute left-0 top-0 h-full w-full rounded-xl border border-primary-dark border-opacity-30 bg-primary bg-opacity-40 transition duration-300 group-hover:scale-110 group-hover:bg-opacity-0 dark:bg-primary-dark dark:bg-opacity-50 group-hover:dark:bg-opacity-0"></div>
