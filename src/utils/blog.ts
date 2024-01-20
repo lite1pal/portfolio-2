@@ -10,10 +10,11 @@ export const getPostBySlug = async (slug: string) => {
   const fileContent = fs.readFileSync(filePath, { encoding: "utf-8" });
   const { frontmatter, content } = await compileMDX({
     source: fileContent,
+
     options: { parseFrontmatter: true },
   });
 
-  return { meta: { ...frontmatter, slug: realSlug }, content };
+  return { meta: { ...frontmatter, slug: realSlug }, content: fileContent };
 };
 
 export const getAllPostsMeta = async () => {

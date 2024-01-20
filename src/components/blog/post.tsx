@@ -1,6 +1,10 @@
 import { formatDate, getPostBySlug } from "@/utils/blog";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { serialize } from "next-mdx-remote/serialize";
 import Image from "next/image";
 import { highlight } from "sugar-high";
+import CustomMDX from "../base/mdx";
+import rehypeHighlight from "rehype-highlight";
 
 export default async function PostView({
   params,
@@ -34,7 +38,9 @@ export default async function PostView({
       <h1>{meta.title}</h1>
       <p>{formatDate(meta.publishedAt)}</p>
       <hr />
-      {content}
+
+      <CustomMDX source={content.split("---")[2]} />
+      {/* <MDXRemote source={mdxSource} /> */}
     </section>
   );
 }
