@@ -36,7 +36,7 @@ export default function Navbar() {
             alt="logo"
           /> */}
           <Flame />
-          Denis Tarasenko
+          <div className="hidden lg:flex">Denis Tarasenko</div>
         </Link>
       </div>
       <div className="navbar-end">
