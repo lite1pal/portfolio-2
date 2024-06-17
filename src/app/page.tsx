@@ -12,7 +12,7 @@ export default function HomeScreen() {
               src="/me.jpg"
             />{" "}
           </div>
-          <div className="text-5xl font-medium leading-tight sm:min-w-[450px] sm:text-6xl">
+          <div className="text-4xl font-medium leading-tight sm:min-w-[450px] sm:text-6xl">
             Hi, I am{" "}
             <span className="rounded bg-secondary px-2 py-1 text-secondary-content">
               Denis
