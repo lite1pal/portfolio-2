@@ -16,9 +16,7 @@ export default async function BlogView() {
   return (
     <div className="my-20 space-y-10">
       <div className="flex flex-col gap-3">
-        <div className="text-4xl font-medium leading-tight text-slate-900 dark:text-slate-50">
-          Latest
-        </div>
+        <div className="text-4xl font-medium leading-tight">Latest</div>
         <p className="text-base-content/60">
           Read about my journey of becoming a solopreneur, where I share{" "}
           <span className="text-base-content">helpful tips and insights!</span>
