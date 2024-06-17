@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Layout from "@/components/layouts/layout";
 import Script from "next/script";
 import { GOOGLE_ANALYTICS_ID } from "@/config/env";
+import Layout from "@/components/layout/layout";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://denistarasenko.com"),
@@ -46,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html data-theme="emerald" lang="en">
       <head>
         <link
           rel="apple-touch-icon"

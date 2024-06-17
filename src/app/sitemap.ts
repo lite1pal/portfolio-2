@@ -1,4 +1,4 @@
-import { getAllPostsMeta } from "@/utils/blog";
+import { getAllPostsMeta } from "@/lib/posts";
 
 export default async function sitemap() {
   const posts: any = (await getAllPostsMeta()).map((post: any) => ({

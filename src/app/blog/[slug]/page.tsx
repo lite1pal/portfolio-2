@@ -1,5 +1,5 @@
-import PostView from "@/components/blog/post";
-import { getAllPostsMeta, getPostBySlug } from "@/utils/blog";
+import PostView from "@/app/blog/[slug]/post";
+import { getPostBySlug } from "@/lib/posts";
 import { Metadata } from "next/types";
 
 export async function generateMetadata({
