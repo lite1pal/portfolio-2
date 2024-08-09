@@ -1,13 +1,12 @@
-import SectionHeader from "@/components/sectionHeader";
 import SectionParagraph from "@/components/sectionParagraph";
-import SectionTitle from "@/components/sectionTitle";
-import Span from "@/components/span";
+import SectionTitle from "@/components/out-of-date/sectionTitle";
+import Span from "@/components/out-of-date/span";
 import { ReactNode } from "react";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import Link from "next/link";
-import { Button } from "../button";
+import SectionHeader from "./sectionHeader";
 
 export default function Services() {
   return (
@@ -117,7 +116,7 @@ function ServiceCard({
           </ServiceItem> */}
         </div>
         <Link href="#collaboration" className="mt-5 flex w-full justify-center">
-          <Button>Get the package</Button>
+          {/* <Button>Get the package</Button> */}
         </Link>
       </div>
     </div>

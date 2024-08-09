@@ -1,7 +1,7 @@
 import SectionHeader from "@/components/sectionHeader";
 import SectionParagraph from "@/components/sectionParagraph";
-import SectionTitle from "@/components/sectionTitle";
-import Span from "@/components/span";
+import SectionTitle from "@/components/out-of-date/sectionTitle";
+import Span from "@/components/out-of-date/span";
 import XLine from "@/components/xLine";
 import Image from "next/image";
 
@@ -114,9 +114,9 @@ function PortfolioItem({
         <a
           target="_blank"
           href={link}
-          className="text-xl font-medium text-slate-900 transition duration-100 hover:text-primary dark:text-slate-50 hover:dark:text-primary-dark"
+          className="hover:dark:text-primary-dark text-xl font-medium text-slate-900 transition duration-100 hover:text-primary dark:text-slate-50"
         >
-          <span className="text-primary dark:text-primary-dark">{count}. </span>
+          <span className="dark:text-primary-dark text-primary">{count}. </span>
           {title}
         </a>
         <div className="rounded bg-slate-200 p-10 text-slate-700 dark:bg-slate-900 dark:text-slate-400">
@@ -129,7 +129,7 @@ function PortfolioItem({
                 key={label}
                 target="_blank"
                 href={link}
-                className="rounded-xl border border-primary border-opacity-50 px-3 py-1 font-medium text-primary dark:border-primary-dark dark:border-opacity-10 dark:font-extralight dark:text-primary-dark"
+                className="dark:border-primary-dark dark:text-primary-dark rounded-xl border border-primary border-opacity-50 px-3 py-1 font-medium text-primary dark:border-opacity-10 dark:font-extralight"
               >
                 {label}
               </a>
@@ -145,7 +145,7 @@ function PortfolioItem({
           reverse && "lg:order-1"
         } group relative float-right max-w-xl opacity-70 transition duration-300 hover:skew-x-0 hover:opacity-100`}
       >
-        <div className="absolute left-0 top-0 h-full w-full rounded-xl border border-primary-dark border-opacity-30 bg-primary bg-opacity-40 transition duration-300 group-hover:scale-110 group-hover:bg-opacity-0 dark:bg-primary-dark dark:bg-opacity-50 group-hover:dark:bg-opacity-0"></div>
+        <div className="border-primary-dark dark:bg-primary-dark absolute left-0 top-0 h-full w-full rounded-xl border border-opacity-30 bg-primary bg-opacity-40 transition duration-300 group-hover:scale-110 group-hover:bg-opacity-0 dark:bg-opacity-50 group-hover:dark:bg-opacity-0"></div>
         <Image
           className="rounded-xl"
           src={img}

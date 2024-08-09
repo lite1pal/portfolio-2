@@ -1,6 +1,10 @@
 import PostView from "@/app/blog/[slug]/post";
-import { getPostBySlug } from "@/lib/posts";
 import { Metadata } from "next/types";
+import { getPostBySlug } from "../actions";
+import { Suspense } from "react";
+import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
+import LeaveComment from "./components/leave-comment";
 
 export async function generateMetadata({
   params,
@@ -41,5 +45,9 @@ export async function generateMetadata({
 }
 
 export default async function Post({ params }: { params: { slug: string } }) {
-  return <PostView {...{ params }} />;
+  return (
+    <Suspense>
+      <PostView {...{ params }} />
+    </Suspense>
+  );
 }

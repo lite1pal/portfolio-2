@@ -27,5 +27,10 @@ export const getAllPostsMeta = async () => {
     const { meta } = await getPostBySlug(file);
     posts.push(meta);
   }
-  return posts;
+  return posts.sort((a: any, b: any) => {
+    if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
+      return -1;
+    }
+    return 1;
+  });
 };

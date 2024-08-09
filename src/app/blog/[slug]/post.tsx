@@ -2,7 +2,10 @@ import Image from "next/image";
 import { highlight } from "sugar-high";
 import CustomMDX from "../../../components/mdx";
 import { formatDate } from "@/lib/utils";
-import { getPostBySlug } from "@/lib/posts";
+import { getPostBySlug } from "../actions";
+import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
+import LeaveComment from "./components/leave-comment";
 
 export default async function PostView({
   params,
@@ -12,7 +15,7 @@ export default async function PostView({
   const { meta, content } = (await getPageContent(params.slug)) as any;
 
   return (
-    <section className="prose mx-auto my-16 max-w-[1000px] px-4 dark:prose-invert lg:px-0">
+    <section className="mx-auto my-16 max-w-[700px] space-y-7">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -33,12 +36,31 @@ export default async function PostView({
           }),
         }}
       />
-      <h1>{meta.title}</h1>
-      <p>{formatDate(meta.publishedAt)}</p>
-      <hr />
+      <Link
+        href="/blog"
+        className="link-hover link absolute left-10 mt-5 flex items-center gap-1.5 text-sm font-medium"
+      >
+        <ChevronLeft className="h-4 w-4 text-base-content/50" />
+        Go back
+      </Link>
+      <h1 className="text-3xl font-bold sm:text-4xl">{meta.title}</h1>
 
-      <CustomMDX source={content.split("---")[2]} />
-      {/* <MDXRemote source={mdxSource} /> */}
+      <div className="flex items-center gap-3">
+        <div>
+          <img src="/me.jpg" className="h-10 w-10 rounded-full object-cover" />
+        </div>
+        <div className="text-sm font-semibold">
+          <div>Denis Tarasenko</div>
+          <a className="link text-primary/60 no-underline hover:text-primary">
+            @lite_pal
+          </a>
+        </div>
+      </div>
+
+      <div className="prose dark:prose-invert">
+        <CustomMDX source={content.split("---")[2]} />
+      </div>
+      <LeaveComment />
     </section>
   );
 }

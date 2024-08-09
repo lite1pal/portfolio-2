@@ -1,21 +1,16 @@
 "use client";
 
-import { Button } from "@/components/button";
-import SectionHeader from "@/components/sectionHeader";
-import SectionParagraph from "@/components/sectionParagraph";
-import SectionTitle from "@/components/sectionTitle";
-import Span from "@/components/span";
-import TextInput from "@/components/textInput";
-import TextareaInput from "@/components/textareaInput";
+import Span from "@/components/out-of-date/span";
 import axios from "axios";
 import {
   TELEGRAM_API_KEY,
   TELEGRAM_API_URL,
   TELEGRAM_CHAT_ID,
 } from "@/config/env";
-import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import toast from "react-hot-toast";
+import SectionHeader from "../out-of-date/sectionHeader";
+import SectionParagraph from "../out-of-date/sectionParagraph";
 
 interface FormData {
   name: string;
@@ -30,7 +25,6 @@ export default function ContactForm() {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<FormData>();
-  const [data, setData] = useState("");
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     try {
@@ -86,31 +80,63 @@ export default function ContactForm() {
           {errors.name?.type === "required" ||
             errors.email?.type === "required" ||
             errors.message?.type === "required"}
-          <TextInput
-            register={register("name", { required: true })}
+
+          <input
+            className={`w-full border-b bg-transparent p-3 outline-none sm:w-96`}
             placeholder="Name"
+            {...register("name", { required: true })}
           />
-          <TextInput
-            register={register("email", { required: true })}
+
+          <input
+            className={`w-full border-b bg-transparent p-3 outline-none sm:w-96`}
             type="email"
             placeholder="Email"
+            {...register("email", { required: true })}
           />
-          <TextareaInput
-            register={register("message", { required: true })}
+
+          <textarea
+            rows={2}
+            className={` w-full resize-none border-b bg-transparent p-3 outline-none sm:w-96`}
             placeholder="Message"
+            {...register("message", { required: true })}
           />
+
           {(errors.name?.type === "required" ||
             errors.email?.type === "required" ||
             errors.message?.type === "required") && <p>Fill out all fields</p>}
         </div>
-        {isSubmitting ? (
-          <span className="loading loading-bars loading-lg mx-auto text-secondary"></span>
-        ) : (
-          <button type="submit" className="btn btn-secondary px-10 text-base">
-            Reach out
-          </button>
-        )}
+
+        <button
+          disabled={isSubmitting}
+          type="submit"
+          className="btn btn-secondary px-10 text-base"
+        >
+          Reach out
+        </button>
       </form>
     </div>
+  );
+}
+
+interface TextInputProps {
+  placeholder: string;
+  register: any;
+  type?: "text" | "email";
+  className?: string;
+}
+
+function TextInput({
+  placeholder,
+  register,
+  type = "text",
+  className,
+}: TextInputProps) {
+  return (
+    <input
+      {...register}
+      className={`${className} w-full border-b bg-transparent p-3 outline-none sm:w-96`}
+      type={type}
+      placeholder={placeholder}
+    />
   );
 }
