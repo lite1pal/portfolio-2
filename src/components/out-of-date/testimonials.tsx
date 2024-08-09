@@ -1,5 +1,4 @@
-import SectionHeader from "@/components/sectionHeader";
-import SectionTitle from "@/components/sectionTitle";
+import SectionTitle from "@/components/out-of-date/sectionTitle";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 // Import Swiper React components
@@ -11,7 +10,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import SectionParagraph from "@/components/sectionParagraph";
-import Span from "@/components/span";
+import Span from "@/components/out-of-date/span";
+import SectionHeader from "./sectionHeader";
 
 export default function Testimonials() {
   return (
@@ -25,7 +25,7 @@ export default function Testimonials() {
         </SectionParagraph>
       </div>
       <svg
-        className="mx-auto h-16 w-16 text-primary dark:text-primary-dark"
+        className="dark:text-primary-dark mx-auto h-16 w-16 text-primary"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
@@ -110,7 +110,7 @@ function Testimonial({
             src="https://iamjamessmith.xyz/assets/img/testimonials/Guy06.jpg"
           />
         </div> */}
-        <div className="text-primary dark:text-primary-dark">
+        <div className="dark:text-primary-dark text-primary">
           <AccountCircleIcon fontSize="large" />
         </div>
         <div className="space-y-1 text-slate-900 dark:text-slate-100">

@@ -1,7 +1,7 @@
-import SectionHeader from "@/components/sectionHeader";
-import SectionTitle from "@/components/sectionTitle";
+import SectionTitle from "@/components/out-of-date/sectionTitle";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import SchoolIcon from "@mui/icons-material/School";
+import SectionHeader from "./sectionHeader";
 
 export default function Resume() {
   return (
@@ -87,13 +87,13 @@ function ResumeItem({
   return (
     <div className="group flex w-full gap-5 rounded-lg p-6 transition duration-300 hover:cursor-pointer hover:bg-slate-300 hover:bg-opacity-20 hover:!opacity-100 lg:group-hover/list:opacity-20 dark:hover:bg-transparent">
       {/* <div className="h-5 min-h-5 w-5 min-w-5 rounded-full bg-emerald-400"></div> */}
-      <div className="text-primary dark:text-primary-dark">
+      <div className="dark:text-primary-dark text-primary">
         {type === "education" ? <SchoolIcon /> : <AdjustIcon />}
       </div>
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-3 md:gap-0.5">
           <div className="flex flex-col md:flex-row md:items-center md:gap-3">
-            <div className="text-lg font-medium text-slate-900 transition group-hover:text-primary dark:text-slate-50 dark:group-hover:text-primary-dark">
+            <div className="dark:group-hover:text-primary-dark text-lg font-medium text-slate-900 transition group-hover:text-primary dark:text-slate-50">
               {position}
             </div>
             <div className="text-sm text-slate-500">{timeline}</div>

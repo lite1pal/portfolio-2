@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
 import { GOOGLE_ANALYTICS_ID } from "@/config/env";
-import Layout from "@/components/layout/layout";
+import { Toaster } from "react-hot-toast";
+import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://denistarasenko.com"),
@@ -92,7 +94,16 @@ export default function RootLayout({
           ></Script>
         </head>
       </head>
-      <Layout {...{ children }} />
+      <body
+        className={`max-w-screen min-h-screen overflow-x-hidden bg-base-100`}
+      >
+        <Toaster />
+        <main className="mx-auto flex h-full flex-grow flex-col px-3 xl:container md:px-10 xl:px-36">
+          <Navbar />
+          {children}
+          {/* <Footer /> */}
+        </main>
+      </body>
     </html>
   );
 }

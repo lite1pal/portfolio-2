@@ -1,4 +1,4 @@
-import { ClassValue, clsx } from "clsx";
+import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 export function formatDate(date: string) {
@@ -33,8 +33,6 @@ export function formatDate(date: string) {
   return `${fullDate} (${formattedDate})`;
 }
 
-// Merges, and therefore optimizes Tailwind classes
-// The package 'tailwind-merge' is used
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }

@@ -1,8 +1,7 @@
-import { Button } from "@/components/button";
-import SectionHeader from "@/components/sectionHeader";
-import SectionTitle from "@/components/sectionTitle";
+import SectionTitle from "@/components/out-of-date/sectionTitle";
 import Image from "next/image";
 import Link from "next/link";
+import SectionHeader from "./sectionHeader";
 
 export default function AboutMe() {
   return (
@@ -29,7 +28,7 @@ export default function AboutMe() {
               sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <div className="mx-auto flex gap-6 text-primary dark:text-primary-dark">
+          <div className="dark:text-primary-dark mx-auto flex gap-6 text-primary">
             <a
               title="Github"
               target="_blank"
@@ -123,7 +122,7 @@ export default function AboutMe() {
             </span>
           </div>
           <Link className="mx-auto" href="#collaboration">
-            <Button>Hit me up</Button>
+            {/* <Button>Hit me up</Button> */}
           </Link>
         </div>
       </div>
