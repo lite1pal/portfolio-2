@@ -31,7 +31,7 @@ function HeroSection() {
           <Image
             width={500}
             height={300}
-            className="h-20"
+            className="h-20 w-full"
             src="/excalidraw/currently-building.png"
             alt="Currently building illustration"
           />
@@ -48,6 +48,7 @@ function HeroSection() {
             className="max-h-[30rem] w-full object-cover"
             src="/demoapp-4.png"
             alt="Demo of Lasting Habits app"
+            priority
           />
         </Link>
       </div>
