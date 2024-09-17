@@ -27,7 +27,7 @@ function WorkExperience() {
 
         <div className="mt-4 flex flex-col gap-7">
           {jobs.map((job) => (
-            <div className="flex justify-between">
+            <div key={job.position} className="flex justify-between">
               <div className="flex items-center gap-5">
                 <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                   <img src={job.imgSrc} className="h-6 w-6" />
