@@ -4,9 +4,8 @@ const products = [
   {
     imgSrc: "/lasting-habits.png",
     title: "Lasting Habits",
-    description:
-      "The only habit tracker you'll ever need. Become better today.",
-    link: "https://lasting-habits.vercel.app",
+    description: "Invest in your habits and you'll see wonders.",
+    link: "https://lastinghabits.app?ref=mywebsite",
   },
   {
     imgSrc: "/nextjs-cap.avif",

@@ -4,7 +4,7 @@ import Script from "next/script";
 import { GOOGLE_ANALYTICS_ID } from "@/config/env";
 import { Toaster } from "react-hot-toast";
 import Navbar from "@/components/layout/navbar";
-import Footer from "@/components/layout/footer";
+import { Recursive as FontSans } from "next/font/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://denistarasenko.com"),
@@ -12,10 +12,12 @@ export const metadata: Metadata = {
     default: "Denis Tarasenko",
     template: "%s | Denis Tarasenko",
   },
-  description: "Web Developer and UX/UI designer",
+  description:
+    "Dev, product maker, indie hacker. Coding my way to independence. Turning ideas into reality one line at a time.",
   openGraph: {
     title: "Denis Tarasenko",
-    description: "Web Developer and UX/UI designer",
+    description:
+      "Dev, product maker, indie hacker. Coding my way to independence. Turning ideas into reality one line at a time.",
     url: "https://denistarasenko.com",
     siteName: "Denis Tarasenko",
     locale: "en_US",
@@ -40,6 +42,11 @@ export const metadata: Metadata = {
     google: "LHTT-WRptRShm2aPWwLVMp0C_4X2H7QMLYWuLfnvXGk",
   },
 };
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -95,13 +102,12 @@ export default function RootLayout({
         </head>
       </head>
       <body
-        className={`max-w-screen min-h-screen overflow-x-hidden bg-base-100`}
+        className={`${fontSans.className} max-w-screen overflow-x-hidden bg-base-100`}
       >
         <Toaster />
-        <main className="mx-auto flex h-full flex-grow flex-col px-3 xl:container md:px-10 xl:px-36">
+        <main className="container mx-auto flex h-full flex-grow flex-col px-3 md:px-10 xl:px-36">
           <Navbar />
           {children}
-          {/* <Footer /> */}
         </main>
       </body>
     </html>
