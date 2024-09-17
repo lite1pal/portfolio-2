@@ -26,20 +26,29 @@ export default function Navbar() {
       <div className="navbar-end max-sm:w-full">
         <ul className="menu menu-horizontal flex items-center gap-1 text-base">
           <li>
-            <a target="_blank" href="https://x.com/lite_pal">
+            <a
+              target="_blank"
+              aria-label="Twitter"
+              href="https://x.com/lite_pal"
+            >
               <Twitter className="h-5 w-5 " />
             </a>
           </li>
           <li>
             <a
               target="_blank"
+              aria-label="LinkedIn"
               href="https://www.linkedin.com/in/denis-tarasenko-39bb44256/"
             >
               <Linkedin className="h-5 w-5 " />
             </a>
           </li>
           <li>
-            <a target="_blank" href="https://github.com/lite1pal">
+            <a
+              target="_blank"
+              aria-label="Github"
+              href="https://github.com/lite1pal"
+            >
               <Github className="h-5 w-5 " />
             </a>
           </li>
