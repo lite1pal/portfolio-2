@@ -1,43 +1,40 @@
-import PageHeader from "@/components/page-header";
-import {
-  ArrowBigLeft,
-  ArrowBigRight,
-  Github,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
 import Link from "next/link";
 
 function HeroSection() {
   return (
-    <div className="relative flex flex-col gap-10 py-16">
-      <div className="absolute -right-96 -top-64 h-[600px] w-[600px] rounded-full bg-primary max-sm:hidden"></div>
-      <div>
-        <img src="/me.jpg" className="h-20 w-20 rounded-full object-cover" />
-      </div>
-      <PageHeader
-        header="Software developer, writer and content creator"
-        description="Hi 👋, I'm Denis! Working as a remote web developer, I build my own products whenever
-          possible because it brings me so much joy."
-      />
-      <div className="flex items-center gap-7">
-        <a target="_blank" href="https://x.com/lite_pal">
-          <Twitter className="cursor-pointer hover:fill-base-content" />
-        </a>
-        <a target="_blank" href="https://github.com/lite1pal">
-          <Github className="cursor-pointer hover:fill-base-content" />
-        </a>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/denis-tarasenko-39bb44256/"
-        >
-          <Linkedin className="cursor-pointer hover:fill-base-content" />
-        </a>
+    <div className=" flex flex-col gap-20 sm:gap-36 lg:flex-row 2xl:justify-center">
+      <div className="my-auto flex flex-col gap-7 leading-tight">
+        <div>
+          <img className="h-44 w-44 rounded-full object-cover" src="/me.jpg" />{" "}
+        </div>
+        <div className="text-4xl font-medium leading-tight sm:min-w-[450px] sm:text-6xl">
+          Hi, I am{" "}
+          <span className="rounded bg-secondary px-2 py-1 text-secondary-content">
+            Denis
+          </span>
+        </div>
+        <div className="max-w-[500px] text-base text-base-content/70">
+          Working as a remote web developer, I build my own products whenever
+          possible because it brings me so much joy.
+        </div>
       </div>
 
-      <Link href="/products" className="btn btn-secondary w-fit px-10">
-        Check out my products
-      </Link>
+      <div className="mt-10 flex flex-col items-center gap-5">
+        <div className="relative sm:-left-10 lg:-left-36">
+          <img className="h-20" src="/excalidraw/currently-building.png" />
+        </div>
+
+        <Link
+          href="https://lastinghabits.app"
+          target="_blank"
+          className="mx-auto max-w-[65rem] transition-all duration-300 hover:scale-105"
+        >
+          <img
+            className="max-h-[30rem] w-full object-cover"
+            src="/demoapp-4.png"
+          />
+        </Link>
+      </div>
     </div>
   );
 }

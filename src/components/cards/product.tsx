@@ -30,7 +30,7 @@ function Product({ product }: ProductProps) {
         {product.link && (
           <div className="flex items-center gap-3 text-sm font-medium text-base-content/50 transition-all duration-300 group-hover:text-primary">
             <Link className="h-4 w-4" />
-            {product.link}
+            {product.link.replace("https://", "")}
           </div>
         )}
       </div>
