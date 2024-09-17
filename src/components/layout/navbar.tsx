@@ -27,25 +27,19 @@ export default function Navbar() {
         <ul className="menu menu-horizontal flex items-center gap-1 text-base">
           <li>
             <a target="_blank" href="https://x.com/lite_pal">
-              {/* <svg
-                width={20}
-                height={20}
-                viewBox="0 0 24 24"
-                // fill={color}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M23.954 4.569c-.885.39-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.724-.949.555-2.005.959-3.127 1.184-.897-.959-2.178-1.559-3.594-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.733-.666 1.579-.666 2.476 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.229-.616v.062c0 2.386 1.693 4.374 3.946 4.828-.413.111-.849.171-1.296.171-.314 0-.622-.03-.92-.086.631 1.953 2.445 3.376 4.6 3.416-1.68 1.319-3.809 2.105-6.102 2.105-.396 0-.79-.023-1.175-.067 2.179 1.397 4.768 2.21 7.557 2.21 9.054 0 14-7.498 14-13.986 0-.21 0-.423-.015-.633.961-.689 1.8-1.56 2.46-2.548l-.047-.02z" />
-              </svg> */}
               <Twitter className="h-5 w-5 " />
             </a>
           </li>
           <li>
-            <a target="_blank" href="">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/denis-tarasenko-39bb44256/"
+            >
               <Linkedin className="h-5 w-5 " />
             </a>
           </li>
           <li>
-            <a target="_blank" href="">
+            <a target="_blank" href="https://github.com/lite1pal">
               <Github className="h-5 w-5 " />
             </a>
           </li>
