@@ -12,8 +12,8 @@ const navItems = {
 export default function Navbar() {
   const pathName = usePathname();
   return (
-    <nav className="navbar gap-5 px-10 py-5">
-      <div className="navbar-start">
+    <nav className="navbar gap-5 py-5 sm:px-10">
+      <div className="navbar-start hidden sm:flex">
         {pathName !== "/" && (
           <Link href="/" className="avatar">
             <div className="w-10 rounded-full">
@@ -22,26 +22,9 @@ export default function Navbar() {
           </Link>
         )}
       </div>
-      <div className="navbar-center">
-        {/* <ul className="flex items-center gap-7 rounded-full px-16 py-2.5 shadow">
-          {Object.entries(navItems).map(([path, { name }]) => {
-            return (
-              <li key={path}>
-                <Link
-                  className={`${
-                    pathName === path && "text-primary"
-                  } transition-all duration-100 hover:text-primary`}
-                  href={path}
-                >
-                  {name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul> */}
-      </div>
-      <div className="navbar-end">
-        <ul className="menu menu-horizontal hidden items-center gap-1 text-base lg:flex">
+      <div className="navbar-center hidden sm:flex"></div>
+      <div className="navbar-end max-sm:w-full">
+        <ul className="menu menu-horizontal flex items-center gap-1 text-base">
           <li>
             <a target="_blank" href="https://x.com/lite_pal">
               {/* <svg
