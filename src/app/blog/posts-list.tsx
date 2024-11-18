@@ -1,5 +1,5 @@
-import BlogPost from "@/components/cards/blog-post";
 import { getAllPostsMeta } from "./actions";
+import BlogPost from "./components/blog-post";
 
 async function PostsList() {
   const posts: any = await getAllPostsMeta();
