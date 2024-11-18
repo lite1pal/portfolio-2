@@ -4,6 +4,7 @@ import Script from "next/script";
 import { GOOGLE_ANALYTICS_ID } from "@/config/env";
 import { Toaster } from "react-hot-toast";
 import { Nunito_Sans as FontSans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://denistarasenko.com"),
@@ -106,6 +107,7 @@ export default function RootLayout({
       >
         <Toaster />
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   );
