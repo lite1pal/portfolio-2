@@ -1,7 +1,7 @@
-import BlogView from "@/app/blog/blog";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
+import BlogView from "./components/blog";
 
 export const metadata: Metadata = {
   title: "Blog",

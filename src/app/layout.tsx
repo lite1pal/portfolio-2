@@ -3,8 +3,7 @@ import "./globals.css";
 import Script from "next/script";
 import { GOOGLE_ANALYTICS_ID } from "@/config/env";
 import { Toaster } from "react-hot-toast";
-import Navbar from "@/components/layout/navbar";
-import { Recursive as FontSans } from "next/font/google";
+import { Nunito_Sans as FontSans } from "next/font/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://denistarasenko.com"),
@@ -13,11 +12,11 @@ export const metadata: Metadata = {
     template: "%s | Denis Tarasenko",
   },
   description:
-    "Dev, product maker, indie hacker. Coding my way to independence. Turning ideas into reality one line at a time.",
+    "I design beautiful, high-performing websites for companies around the world. Email me if you’re in need of a powerful online presence. If we’re compatible, I’ll provide a time and cost breakdown.",
   openGraph: {
     title: "Denis Tarasenko",
     description:
-      "Dev, product maker, indie hacker. Coding my way to independence. Turning ideas into reality one line at a time.",
+      "I design beautiful, high-performing websites for companies around the world. Email me if you’re in need of a powerful online presence. If we’re compatible, I’ll provide a time and cost breakdown.",
     url: "https://denistarasenko.com",
     siteName: "Denis Tarasenko",
     locale: "en_US",
@@ -43,9 +42,10 @@ export const metadata: Metadata = {
   },
 };
 
+// Change a font for all text
 const fontSans = FontSans({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export default function RootLayout({
@@ -102,13 +102,10 @@ export default function RootLayout({
         </head>
       </head>
       <body
-        className={`${fontSans.className} max-w-screen overflow-x-hidden bg-base-100`}
+        className={`${fontSans.className} max-w-screen overflow-x-hidden bg-white`}
       >
         <Toaster />
-        <main className="container mx-auto flex h-full flex-grow flex-col px-3 md:px-10 xl:px-36">
-          <Navbar />
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
