@@ -39,7 +39,7 @@ function Button({
       >
         {children}
       </button>
-      <div className="border-foreground absolute -bottom-[10px] -right-2 -z-10 h-[50px] w-full border-[3px] xl:-bottom-2 xl:h-[70px] xl:max-w-[238px]"></div>
+      <div className="absolute -bottom-[10px] -right-2 -z-10 h-[50px] w-full border-[3px] border-foreground xl:-bottom-2 xl:h-[70px] xl:max-w-[238px]"></div>
     </div>
   );
 }

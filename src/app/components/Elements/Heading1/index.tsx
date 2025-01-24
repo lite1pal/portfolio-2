@@ -3,7 +3,7 @@ import { Poppins, Playfair_Display } from "next/font/google";
 import { HTMLAttributes, ReactNode } from "react";
 
 // Change a font for Heading components
-const poppins = Playfair_Display({
+const poppins = Poppins({
   preload: true,
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -15,7 +15,7 @@ interface Heading1Props extends HTMLAttributes<HTMLHeadingElement> {
 }
 
 function Heading1({ children, className, ...props }: Heading1Props) {
-  const baseStyles = "text-3xl font-[800]"; // set default styles
+  const baseStyles = "text-3xl font-[700]"; // set default styles
   const combinedStyles = cn(baseStyles, className); // merge default and passed-in styles
 
   return (
