@@ -32,3 +32,21 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+.tooltip:before {
+  @apply rounded-xl text-xs font-[500] leading-5 text-white;
+}
+
+::selection {
+  /* ... */
+  background-color: #06b200;
+  color: white;
+}
+
+a {
+  color: #06b200;
+}
+
+a:hover {
+  text-decoration: underline;
+}
