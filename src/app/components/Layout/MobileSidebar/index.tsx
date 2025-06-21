@@ -45,7 +45,7 @@ function MobileSidebar() {
         className={`${open ? "flex" : "hidden"} absolute left-0 top-0 w-full`}
       >
         <div className="flex w-full justify-end bg-white p-[20px]">
-          <div className="text-foreground flex flex-col items-start gap-3 text-lg font-medium">
+          <div className="flex flex-col items-start gap-3 text-lg font-medium text-foreground">
             <button
               onClick={handleOpenSidebar}
               className="mb-5 flex w-full justify-end"
@@ -58,14 +58,14 @@ function MobileSidebar() {
               </a>
             ))}
             <div className="mt-10 flex items-center gap-7">
-              <a href="https://x.com/lite_pal">
-                <Twitter className="hover:fill-foreground transition-all duration-300" />
+              <a href="https://x.com/shipwithdenis">
+                <Twitter className="transition-all duration-300 hover:fill-foreground" />
               </a>
               <a href="https://www.linkedin.com/in/denis-tarasenko-39bb44256/">
-                <Linkedin className="hover:fill-foreground transition-all duration-300" />
+                <Linkedin className="transition-all duration-300 hover:fill-foreground" />
               </a>
               <a className="https://github.com/lite1pal">
-                <Github className="hover:fill-foreground cursor-pointer transition-all duration-300" />
+                <Github className="cursor-pointer transition-all duration-300 hover:fill-foreground" />
               </a>
             </div>
           </div>

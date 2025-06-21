@@ -51,8 +51,8 @@ export default async function PostView({
         </div>
         <div className="text-sm font-semibold">
           <div>Denis Tarasenko</div>
-          <a className="link text-primary/60 no-underline hover:text-primary">
-            @lite_pal
+          <a className="text-primary/60 link no-underline hover:text-primary">
+            @shipwithdenis
           </a>
         </div>
       </div>
