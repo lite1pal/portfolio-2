@@ -21,17 +21,17 @@ export default function Navbar() {
           <a href="mailto:deniskatarasenko6@gmail.com">get in touch</a>
         </BgSpan>
         <div className="flex items-center gap-7">
-          <a href="https://x.com/lite_pal" target="_blank">
-            <Twitter className="hover:fill-foreground h-5 w-5 transition-all duration-300" />
+          <a href="https://x.com/shipwithdenis" target="_blank">
+            <Twitter className="h-5 w-5 transition-all duration-300 hover:fill-foreground" />
           </a>
           <a
             href="https://www.linkedin.com/in/denis-tarasenko-39bb44256/"
             target="_blank"
           >
-            <Linkedin className="hover:fill-foreground h-5 w-5 transition-all duration-300" />
+            <Linkedin className="h-5 w-5 transition-all duration-300 hover:fill-foreground" />
           </a>
           <a className="https://github.com/lite1pal" target="_blank">
-            <Github className="hover:fill-foreground h-5 w-5 cursor-pointer transition-all duration-300" />
+            <Github className="h-5 w-5 cursor-pointer transition-all duration-300 hover:fill-foreground" />
           </a>
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function Navbar() {
             <a
               target="_blank"
               aria-label="Twitter"
-              href="https://x.com/lite_pal"
+              href="https://x.com/shipwithdenis"
             >
               <Twitter className="h-5 w-5 " />
             </a>
