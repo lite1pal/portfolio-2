@@ -1,3 +1,4 @@
+import Image from "next/image";
 import HeroSection from "./components/Sections/HeroSection";
 import ProjectSection from "./components/Sections/ProjectSection";
 import WantToWorkSection from "./components/Sections/WantToWorkSection";
@@ -74,11 +75,11 @@ const projects = [
 export default function HomeScreen() {
   return (
     <div
-      className={`mx-auto flex h-screen max-w-xl flex-col gap-16 pt-28 text-3xl font-[400] max-sm:px-4 ${outfit.className}`}
+      className={`mx-auto flex min-h-screen max-w-4xl flex-col gap-16 pb-20 pt-28 text-xl font-[400] max-sm:px-4 sm:text-3xl xl:pb-0 ${outfit.className}`}
     >
       <div className="flex items-center gap-6">
         Hi, my name is Denis Tarasenko
-        <img src="/denis.jpg" className="h-32 w-32 rounded-full object-cover" />
+        <img src="/denis.jpg" className="h-16 w-16 rounded-full object-cover" />
       </div>
 
       <div className="flex items-center gap-6">
@@ -92,16 +93,19 @@ export default function HomeScreen() {
             className="tooltip shrink-0 cursor-pointer"
             data-tip="Lasting Habits, iOS app"
           >
-            <img
+            <Image
               src="/lasting-habits-logo.png"
               className="z-10 h-16 w-16 transition-transform duration-200"
+              width={64}
+              height={64}
+              alt="Lasting Habits iOS app logo"
             />
           </a>
           <a
             href="https://nextnative.dev?ref=portfolio"
             target="_blank"
             className="tooltip mt-6 transition-transform duration-200 group-hover:translate-x-6"
-            data-tip="NextNative"
+            data-tip="NextNative, Mobile Kit"
           >
             <svg
               width="26"
@@ -149,7 +153,10 @@ export default function HomeScreen() {
           target="_blank"
           className="shrink-0"
         >
-          <img
+          <Image
+            alt="X logo"
+            width={40}
+            height={40}
             src="/X_logo.jpg"
             className="h-10 w-10 rotate-6 rounded-lg transition-all duration-200 hover:rotate-0"
           />
