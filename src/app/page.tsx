@@ -75,14 +75,14 @@ const projects = [
 export default function HomeScreen() {
   return (
     <div
-      className={`mx-auto flex min-h-screen max-w-4xl flex-col gap-16 pb-20 pt-28 text-xl font-[400] max-sm:px-4 sm:text-3xl xl:pb-0 ${outfit.className}`}
+      className={`mx-auto flex min-h-screen max-w-4xl flex-col gap-16 overflow-x-hidden px-4 pb-20 pt-12 text-xl font-[400] sm:pt-28 sm:text-3xl xl:pb-0 ${outfit.className}`}
     >
       <div className="flex items-center gap-6">
         Hi, my name is Denis Tarasenko
         <img src="/denis.jpg" className="h-16 w-16 rounded-full object-cover" />
       </div>
 
-      <div className="flex items-center gap-6">
+      <div className="flex items-center sm:gap-6">
         <div className="max-w-[250px] sm:max-w-full">
           I build cool apps and developer tools
         </div>
@@ -104,7 +104,7 @@ export default function HomeScreen() {
           <a
             href="https://nextnative.dev?ref=portfolio"
             target="_blank"
-            className="tooltip mt-6 transition-transform duration-200 group-hover:translate-x-6"
+            className="tooltip mt-6 transition-transform duration-200 sm:group-hover:translate-x-6"
             data-tip="NextNative, Mobile Kit"
           >
             <svg
@@ -112,7 +112,7 @@ export default function HomeScreen() {
               height="26"
               viewBox="0 0 26 26"
               fill="none"
-              className="mt-4 scale-[2.2] rounded-md bg-green-100 p-1"
+              className="relative mt-4 scale-[2.2] rounded-md bg-green-100 p-1 max-sm:right-3"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
