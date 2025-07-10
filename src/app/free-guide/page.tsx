@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 function Page() {
-  const size = 600;
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://subscribe-forms.beehiiv.com/embed.js";
@@ -36,15 +35,15 @@ function Page() {
           <Image
             src="/dodo.jpeg"
             alt="Revenue"
-            width={size}
-            height={size}
-            className="rounded-lg"
+            width={600}
+            height={200}
+            className="rounded-lg "
           />
           <Image
             src="/reddit-success.jpeg"
             alt="Reddit Success"
-            width={size}
-            height={size}
+            width={600}
+            height={200}
             className="rounded-lg"
           />
         </div>
