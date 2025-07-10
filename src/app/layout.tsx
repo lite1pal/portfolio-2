@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html data-theme="emerald" lang="en">
+    <html lang="en">
       <head>
         <link
           rel="apple-touch-icon"
