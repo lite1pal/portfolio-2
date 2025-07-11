@@ -26,7 +26,7 @@ function Page() {
   return (
     <div
       id="main"
-      className="flex min-h-screen flex-col items-center justify-center gap-10"
+      className="flex min-h-screen flex-col items-center gap-10 py-5"
     >
       <div className="flex flex-col items-center justify-center gap-3">
         <div className="flex gap-3">
