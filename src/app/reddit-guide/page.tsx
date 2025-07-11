@@ -42,7 +42,7 @@ function Page() {
             alt="Reddit Success"
             width={500}
             height={180}
-            className="hidden rounded-lg xl:block"
+            className="hidden rounded-lg md:block"
           />
         </div>
         <Image
