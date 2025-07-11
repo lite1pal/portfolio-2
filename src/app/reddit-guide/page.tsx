@@ -5,45 +5,43 @@ import { useEffect } from "react";
 
 function Page() {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://subscribe-forms.beehiiv.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
+    const eocampaignScript = document.createElement("script");
+    eocampaignScript.src =
+      "https://eocampaign1.com/form/23e9564a-5e43-11f0-a394-c9b14d8ae113.js";
+    eocampaignScript.async = true;
+    eocampaignScript.dataset.form = "23e9564a-5e43-11f0-a394-c9b14d8ae113";
+
+    const mainDiv = document.getElementById("main");
+    if (mainDiv) {
+      mainDiv.appendChild(eocampaignScript);
+    }
+
+    return () => {
+      if (mainDiv) {
+        mainDiv.removeChild(eocampaignScript);
+      }
+    };
   }, []);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
-      <iframe
-        src="https://subscribe-forms.beehiiv.com/f23fdfa1-52a1-4764-9189-3b797b183283"
-        className="beehiiv-embed"
-        data-test-id="beehiiv-embed"
-        frameBorder="0"
-        scrolling="no"
-        style={{
-          width: "800px",
-          height: "340px",
-          margin: 0,
-          borderRadius: "0px",
-          backgroundColor: "transparent",
-          boxShadow: "0 0 #0000",
-          maxWidth: "100%",
-        }}
-      />
-
+    <div
+      id="main"
+      className="flex min-h-screen flex-col items-center justify-center gap-10"
+    >
       <div className="flex flex-col items-center justify-center gap-3">
         <div className="flex gap-3">
           <Image
             src="/dodo.jpeg"
             alt="Revenue"
-            width={600}
-            height={200}
-            className="rounded-lg "
+            width={500}
+            height={180}
+            className="rounded-lg"
           />
           <Image
             src="/reddit-success.jpeg"
             alt="Reddit Success"
-            width={600}
-            height={200}
+            width={500}
+            height={180}
             className="rounded-lg"
           />
         </div>
