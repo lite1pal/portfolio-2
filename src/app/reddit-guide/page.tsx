@@ -29,7 +29,7 @@ function Page() {
       className="flex min-h-screen flex-col items-center gap-10 py-5"
     >
       <div className="flex flex-col items-center justify-center gap-3">
-        <div className="flex gap-3">
+        <div className="flex flex-col gap-3 xl:flex-row">
           <Image
             src="/dodo.jpeg"
             alt="Revenue"
@@ -42,7 +42,7 @@ function Page() {
             alt="Reddit Success"
             width={500}
             height={180}
-            className="rounded-lg"
+            className="hidden rounded-lg xl:block"
           />
         </div>
         <Image
