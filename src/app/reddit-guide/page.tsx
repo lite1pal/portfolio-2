@@ -31,27 +31,36 @@ function Page() {
       <div className="flex flex-col items-center justify-center gap-3">
         <div className="flex flex-col gap-3 xl:flex-row">
           <Image
-            src="/dodo.jpeg"
+            src="/dodo-2.png"
             alt="Revenue"
             width={500}
             height={180}
             className="rounded-lg"
           />
           <Image
-            src="/reddit-success.jpeg"
+            src="/reddit-success-3.png"
             alt="Reddit Success"
             width={500}
             height={180}
             className="hidden rounded-lg md:block"
           />
         </div>
-        <Image
-          src="/reddit-views.png"
-          alt="Reddit Views"
-          width={300}
-          height={300}
-          className="rounded-lg"
-        />
+        <div className="flex flex-col gap-3 xl:flex-row">
+          <Image
+            src="/reddit-views.png"
+            alt="Reddit Views"
+            width={300}
+            height={120}
+            className="rounded-lg"
+          />
+          <Image
+            src="/reddit-views-2.png"
+            alt="Reddit Views"
+            width={300}
+            height={80}
+            className="h-fit rounded-lg"
+          />
+        </div>
       </div>
     </div>
   );
